@@ -110,7 +110,19 @@ function atualizaEstatisticas(peca, operacao){
         }
 
         }   
-        
-
     )
+}
+
+const botao = document.querySelectorAll("[data-botao]")
+
+botao.forEach((elemento)=>{
+    elemento.addEventListener("click",(evento)=>{
+        alterarCores(evento.target.dataset.botao)
+
+    })
+})
+
+
+function alterarCores(corClicada){
+    document.querySelector("[data-imagem]").src = "img/robotron" + corClicada + ".png";
 }

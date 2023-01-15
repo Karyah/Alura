@@ -38,12 +38,15 @@ main {
 }
 
 .robo {
-    height: 110%;
     z-index: 1;
+    height: 110%;
     position: absolute;
     left: -20%;
     top: -5%;
 }
+
+
+
 
 .titulo {
     transform: rotate(180deg);
@@ -133,6 +136,7 @@ main {
 
 .producao {
     margin-top: 1em;
+    margin-left: 0.5rem;
     font-size: 2em;
     text-transform: uppercase;
     padding: 0.2em 1em;
@@ -145,7 +149,7 @@ main {
 
 .producao:hover {
     background: var(--main-preto);
-    color: var(--main-branco)
+    color: var(--main-branco);
 }
 
 
@@ -230,4 +234,26 @@ main {
         height: 80vh;
         margin: 10vh auto;
     }
+}
+
+
+.cores{
+   flex-basis: 15%;
+   padding: 2rem 2rem 0;
+}
+
+.botao{
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 10%;
+    margin-top: 0.7em;
+    margin-left: 0.5rem;
+    padding: 0.2em;
+    font-size: 2em;
+    text-transform: uppercase;
+    float: right;
+    color:var(--main-branco);
+    /* border: 3px solid var(--main-branco); */
+    /* background: var(--main-branco); */
+    cursor: pointer;
 }
