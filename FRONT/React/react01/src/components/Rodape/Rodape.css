@@ -1,0 +1,15 @@
+.rodape{
+    display: flex;
+    justify-content: space-around;
+    background-color: #6278F7;
+    padding:2rem;
+}
+
+.logos img{
+    padding:1rem;
+}
+
+.assinatura{
+    padding-top:1.6rem;
+    color: white;
+}
