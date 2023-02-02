@@ -1,13 +1,13 @@
-.campo-texto{
+.campo{
     margin: 2rem;
 }
 
-.campo-texto label{
+.campolabel{
     display: block;
     margin-bottom: 0.5rem;
 }
 
-.campo-texto input{
+.campo input{
         background-color: #FFFFFF;
         box-shadow: 10px 10px 30px  rgba(0 0 0 0,06);
         width: 100%;
@@ -15,4 +15,8 @@
         border: none;
         padding:1rem;
         box-sizing: border-box;
+}
+.campo-color input{
+    padding: 5px 24px;
+    height: 40px;
 }
