@@ -25,3 +25,18 @@ Essas serão as primeiras mais essenciais que acrescentaremos em nossa aplicaç�
 # Programando
 
 * Devemos forçar a atualização do Maven, para que tenhamos certeza que todas as dependencias foram baixadas corretamente.
+
+* Static:
+    * Onde fica as coisas estáticas, css, js, imagens
+
+* Templates:
+    * Páginas HTML
+
+* Applications.properties
+    * Configurações de nosso projeto.
+
+## Detalhes importante
+
+* @RestController
+* @RequestMapping("/")
+* @GetMapping
