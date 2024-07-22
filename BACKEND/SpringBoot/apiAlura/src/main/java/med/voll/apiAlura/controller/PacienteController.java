@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import jakarta.validation.Valid;
-import med.voll.apiAlura.dto.DadosAtualizacaoPaciente;
-import med.voll.apiAlura.dto.DadosCadastroPaciente;
-import med.voll.apiAlura.dto.DadosDetalhamentoPaciente;
-import med.voll.apiAlura.dto.DadosListagemPaciente;
-import med.voll.apiAlura.model.Paciente;
-import med.voll.apiAlura.repositories.PacienteRepository;
-import med.voll.apiAlura.services.PacienteServices;
+import med.voll.apiAlura.model.paciente.DadosAtualizacaoPaciente;
+import med.voll.apiAlura.model.paciente.DadosCadastroPaciente;
+import med.voll.apiAlura.model.paciente.DadosDetalhamentoPaciente;
+import med.voll.apiAlura.model.paciente.DadosListagemPaciente;
+import med.voll.apiAlura.model.paciente.Paciente;
+import med.voll.apiAlura.model.paciente.PacienteRepository;
+import med.voll.apiAlura.model.paciente.PacienteServices;
 
 @RestController
 @RequestMapping("pacientes")

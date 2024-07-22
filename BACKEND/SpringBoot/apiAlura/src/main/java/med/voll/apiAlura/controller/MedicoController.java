@@ -20,12 +20,13 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import jakarta.validation.Valid;
 import med.voll.apiAlura.model.*;
-import med.voll.apiAlura.dto.DadosAtualizacaoMedico;
-import med.voll.apiAlura.dto.DadosCadastroMedico;
-import med.voll.apiAlura.dto.DadosDetalhamentoMedico;
-import med.voll.apiAlura.dto.DadosListagemMedico;
-import med.voll.apiAlura.repositories.MedicoRepository;
-import med.voll.apiAlura.services.MedicoService;
+import med.voll.apiAlura.model.medico.DadosAtualizacaoMedico;
+import med.voll.apiAlura.model.medico.DadosCadastroMedico;
+import med.voll.apiAlura.model.medico.DadosDetalhamentoMedico;
+import med.voll.apiAlura.model.medico.DadosListagemMedico;
+import med.voll.apiAlura.model.medico.Medico;
+import med.voll.apiAlura.model.medico.MedicoRepository;
+import med.voll.apiAlura.model.medico.MedicoService;
 
 
 @RestController

@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
-import med.voll.apiAlura.dto.DadosAutenticacao;
 import med.voll.apiAlura.infra.security.DadosTokenJWT;
 import med.voll.apiAlura.infra.security.TokenService;
-import med.voll.apiAlura.model.Usuario;
+import med.voll.apiAlura.model.usuario.DadosAutenticacao;
+import med.voll.apiAlura.model.usuario.Usuario;
 
 @RestController
 @RequestMapping("/login")
