@@ -1,4 +1,4 @@
-package med.voll.apiAlura.model.consulta.validacoes;
+package med.voll.apiAlura.model.consulta.validacoes.agendamento;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

@@ -2,7 +2,10 @@ package med.voll.apiAlura.model.consulta;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,6 +13,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -37,5 +42,20 @@ public class Consulta {
 	@JoinColumn(name= "id_paciente")
 	private Paciente paciente;
 	
+	@Column(name = "data")
 	private LocalDateTime data;
+	
+	@Column(name = "motivo_cancelamento")
+	@Enumerated(EnumType.STRING)
+	private MotivoCancelamento motivoCancelamento;
+	
+	
+	
+	public void cancelar(MotivoCancelamento motivo) {
+		this.motivoCancelamento = motivo;
+	}
+
+	public Consulta(Long id, Medico medico2, Paciente paciente2, @NotNull @Future LocalDateTime data2) {
+		// TODO Auto-generated constructor stub
+	}
 }
