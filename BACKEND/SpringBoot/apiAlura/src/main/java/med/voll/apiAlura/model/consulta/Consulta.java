@@ -2,6 +2,7 @@ package med.voll.apiAlura.model.consulta;
 
 import java.time.LocalDateTime;
 
+import io.micrometer.common.lang.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -47,15 +48,12 @@ public class Consulta {
 	
 	@Column(name = "motivo_cancelamento")
 	@Enumerated(EnumType.STRING)
+	@Nullable
 	private MotivoCancelamento motivoCancelamento;
-	
-	
 	
 	public void cancelar(MotivoCancelamento motivo) {
 		this.motivoCancelamento = motivo;
 	}
 
-	public Consulta(Long id, Medico medico2, Paciente paciente2, @NotNull @Future LocalDateTime data2) {
-		// TODO Auto-generated constructor stub
-	}
+	
 }
