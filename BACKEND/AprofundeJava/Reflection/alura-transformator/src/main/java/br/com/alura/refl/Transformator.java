@@ -9,7 +9,7 @@ public class Transformator {
 	public <I, O> O transform(I input) throws ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, SecurityException{
 		/* i - input; o - output*/
 		Class<?> source = input.getClass();
-		Class<?> target = Class.forName(source + "DTO");
+		Class<?> target = Class.forName(source.getName() + "DTO");
 		
 		O targetClass = (O) target.getDeclaredConstructor().newInstance();
 		
