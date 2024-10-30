@@ -1,10 +1,8 @@
 package br.com.alura.refl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import br.com.alura.Endereco;
 import br.com.alura.Pessoa;
 import br.com.alura.PessoaDTO;
