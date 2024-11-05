@@ -90,3 +90,52 @@ Cada zona de disponibilidade funciona como um datacenter independente dentro da 
 É possível distribuir os datacenter que você irá utilizar pelo mundo, de acordo com necessidade. 
 
 Essa é vantagem que a nuvem leva em relação a datacenters _on-premisses_ (sistema de infraestrutura local).
+
+# Utilizando a AWS
+
+## EC2 
+
+#### Grupos de segurança: 
+definem as regras de acesso à instância por meio da internet. 
+
+#### Regras de entrada: Todo fluxo/tráfego da rede que entra na instância
+Controla quem pode "entrar" na sua instância. Definem quais tipos de tráfego são permitidos entrar na sua instância a partir da internet. Quais tipos de dados podem ser recevidos de outros compputadores da internet. Permite por exemplo que os usuários enviem requisições para o servidor web.
+- porta
+- protocolo: procolos que podem ser utilizados na instância
+- origem: sinaliza quais enderenços IPS são autorizados a entrar na instância. (0.0.0.0/0 -> qualquer um pode)
+
+#### Regras de saída: Todo fluxo/tráfego que nossa instância envia para a internet
+Definem quais tipos de tráfego a sua instância pode enviar para a internet. Determinam quais tipos de dados podem ser enviador para outros computadores da internet. Se a instância tiver um servidor web, as regras de saída permitirão que ele encie páginas web para os navegadores do usuário.
+
+- protocolo: procolos que podem ser utilizados na instância
+- destinos: sinaliza quais enderenços IPS são autorizados a receber retornos da instância
+
+
+HTTPS: opera na porta 443
+HTTP: opera na porta 80
+
+pra que a gente possa visualizar o servidor web devemos permitir que o procolo HTTP/HTTPS seja utilizado na regra de entrada
+
+#### Protocolo SSH:
+- protocolo usado para acessar e gerenciar instâncias EC2 de forma segura e remota. Permite que administradores e desenvolvedores consigam acessar suas instãncias, executem comandos e realizem tarefas. Opera na porta 22.
+- necessário configurar par de chaves 
+
+#### Par de chaves:
+Algoritmos de criptografia: RSA, ED2559 
+
+Usuário padrão de instancia: ec2-user
+
+Depois do @, colocar o ipv4 público da instância
+
+    $ssh -i /home/chave_instancia.pem ec2-user@ec2-18-219...
+
+O comando ssh -i é usado para conectar-se a um servidor remoto usando SSH, ele especifica a chave privada que voce deseka usar para autenticar a conexão. O índice -i inidica que uma chave privada está sendo fornecida.
+
+
+#### Protocolo HHTP:
+- protocolo para transferência de páginas web. Usado por navegadores para carregar web sites.
+- O HTTPS é uma versão do HTTP que implementa o TLS nativamente
+
+### Sobre as regras de segurança:
+É ideal permitir tráfego de entrada nas portas de HTTP e HTTPS, 80 e 443 respectivamente, de qualquer endereço (0.0.0.0/0), e restringir o tráfego de saída apenas para serviços essenciais.
+
